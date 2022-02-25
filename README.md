@@ -7,7 +7,12 @@ a two-dimensional tile-based game set in a fantasy world with pixel art graphics
 
 simple python game with tkinter
 
-## compass update dynamic for hero or monster or other objects
+# target
+
+![image](https://user-images.githubusercontent.com/55125302/155734097-9c46ce37-9b1d-4de7-85f4-e5bad9c43450.png)
+
+
+## compass update dynamic for hero or monster or other objects (current)
 ![image](https://user-images.githubusercontent.com/55125302/155733492-99f89cb3-a01b-4946-ba30-f909ec6bd289.png)
 
 
