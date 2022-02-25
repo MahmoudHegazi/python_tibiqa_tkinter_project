@@ -27,3 +27,4 @@ using this logic reduce 0 chance of error what ever size of current map or champ
 | (0,0) | (50,0) | (0,0) | (50,0) | (0,0) | (50,0) | (0,0) |
 
 | Command | Description |
+| --- | --- |
