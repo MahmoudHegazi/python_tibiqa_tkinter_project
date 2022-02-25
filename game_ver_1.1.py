@@ -15,6 +15,7 @@ y_cordinate = 0
 cWidth = 500
 cHeight = 400
 square = 50
+champ_size = 50
 monsters_limit = 5
 monsters = []
 static_mythra = []
@@ -35,30 +36,79 @@ def fun(event):
 def t():
     return oldepoch
 
+# new move technique 2db here with tkinter can used for create any map with character and can move  him conintue db level2 socket level3
 
+champ_position = {'x': 0,'y':0}
 def moveChamp(event):
     # this very important point in game and in later levels it define how speed of user in attack or in move later
     # can have delay for move that with boots and delay for attack q and w and e and r depend on training and level
     global oldepoch
     global mychamp
-    game_speed_delay = time.time() - oldepoch >= 0.50
+    global current_right
+    global square
+    global champ_size
+    global current_left
+    global champ_position
+    global cWidth
+    global cHeight
+    # print(mychamp)
+    
+    game_speed_delay = time.time() - oldepoch >= 0.10
     if game_speed_delay:
         oldepoch = time.time()
     else:
         return False
     if event.keysym.lower() == 'right':
-        w.delete(mychamp)
-        print('moved right')
-        character_actions.append("right")        
+        ###### w.delete(mychamp) #####
+        ## answer why - champ_size becuase it start at sqaure
+        last_right = cWidth - champ_size
+        if champ_position['x'] < (last_right):
+            champ_position['x'] += champ_size 
+            w.moveto(mychamp, champ_position['x'], champ_position['y'])
+            print('>Right Dim (X): ' , champ_position['x'])
+
+            ## check posible right squares note here we did check after new position of hero so it <= last_right_sqaure (note any last right)
+            checkright = champ_position['x'] + champ_size
+            if checkright <= last_right:
+                print("can have monster or attack from Right side sobksa later")
+            
+            character_actions.append("right")        
     elif event.keysym.lower() == 'left':
-        print('moved left')
-        character_actions.append("left")
+        if champ_position['x'] > 0:
+            champ_position['x'] -= champ_size 
+            w.moveto(mychamp, champ_position['x'], champ_position['y'])
+            print('<left Dim (X): ' , champ_position['x'])
+            # save character action also it can used for game bots repeater and action recoreder
+
+            checkleft = champ_position['x'] - champ_size
+            # also note why >= 0 becuase this is first square positon it can be 0
+            if checkleft >= 0:
+                print("can have monster or attack from Left side sobksa later")
+                
+            character_actions.append("left")
     elif event.keysym.lower() == 'up':
-        print('moved up')
-        character_actions.append("up")
+        if champ_position['y'] > 0:
+            champ_position['y'] -= champ_size
+            w.moveto(mychamp, champ_position['x'], champ_position['y'])
+            print('^UP Dim (Y): ' , champ_position['y'])
+
+            checkup = champ_position['y'] - champ_size
+            if checkup >= 0:
+                print("can have monster or attack from Up side sobksa later")
+                
+            character_actions.append("up")
     elif event.keysym.lower() == 'down':
-        print('moved up')
-        character_actions.append("down")
+        last_down = cHeight - champ_size
+        if champ_position['y'] < last_down:
+            champ_position['y'] += champ_size
+            w.moveto(mychamp, champ_position['x'], champ_position['y'])
+            print('^Down Dim (Y): ' , champ_position['y'])
+
+            checkdown = champ_position['y'] + champ_size
+            if checkdown <= last_down:
+                print("can have monster or attack from Down side sobksa later")            
+            
+            character_actions.append("down")
     elif event.keysym.lower() == 'q':
         print('spell q')
         character_actions.append("q")
