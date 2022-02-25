@@ -6,6 +6,10 @@ a two-dimensional tile-based game set in a fantasy world with pixel art graphics
 
 simple python game with tkinter
 
+## compass update dynamic for hero or monster or other objects
+![image](https://user-images.githubusercontent.com/55125302/155733492-99f89cb3-a01b-4946-ba30-f909ec6bd289.png)
+
+
 ![image](https://user-images.githubusercontent.com/55125302/155687939-67bd9201-f178-4201-bc0e-45249b993e9e.png)
 
 ## 1D PY tkinter move right and left with keyboard arrow py (1d left and right controlled using strict py logic)
