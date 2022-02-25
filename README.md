@@ -2,7 +2,7 @@
 
 ## Description : 
 a two-dimensional tile-based game set in a fantasy world with pixel art graphics and a top-down perspective.
-(Online DeskTop python tkinter project)
+(final goal Online DeskTop python tkinter project)
 
 simple python game with tkinter
 
