@@ -16,7 +16,7 @@ using this logic reduce 0 chance of error what ever size of current map or champ
 ![image](https://user-images.githubusercontent.com/55125302/155696026-f8dd17f3-4fe3-42f3-ad18-aa1befde9015.png)
 
 
-city_map and compas +
+city_map and compas + with diagonally
 
 | (0,0) | (50,0) | (100,0) | (150,0) | (200,0) | (250,0) | 300,0) |
 | --- | --- | --- | --- | --- | --- | --- |
