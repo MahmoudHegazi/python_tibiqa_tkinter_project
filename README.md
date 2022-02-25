@@ -26,7 +26,7 @@ city_map and compas + with diagonally
 | C | (0,100) | (50,100) | (100,100) | (150,100) | (200,100) | (250,100) | (300,100) |
 
 
-####### current (150,50) need move diagonally right have (200, 50) and (150, 100) so it will 
+####### current (150,50) need move diagonally right have (200, 50) and (150, 100) so it will  (diagonally (Right Down) with compas can down and can right
 
 ```
 (200, y1+square (50 + 50) = 100) (200,100)
