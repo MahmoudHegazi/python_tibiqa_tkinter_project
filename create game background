@@ -1,4 +1,6 @@
 from tkinter import *
+import random
+
 root = Tk()
 
 screen_width = root.winfo_screenwidth()
@@ -8,13 +10,17 @@ y_cordinate = 0
 cWidth = 250
 cHeight = 200
 square = 50
-
+monsters_limit = 5
+monsters = []
 root.geometry("{}x{}+{}+{}".format(int(screen_width/2), int(screen_height), x_cordinate, y_cordinate))
 
 w = Canvas(root, width=cWidth, height=cHeight, highlightthickness=1, highlightbackground="black")
 # (rightLeft_start, topBottom_start, width, height)
 #w.create_rectangle(0, 0, 50, 50, fill="red", outline = 'yellow')
 
+def can_add_monster():
+    addok = random.choice([True, False, False, False, False,True, False])
+    return addok
 def createMythra(width, height, square):
     shapeW = int(width / square)
     shapeH = int(height / square)
@@ -26,9 +32,13 @@ def createMythra(width, height, square):
     
     for x in range(shapeH):
         for dim in row_data:
-            w.create_rectangle(dim['x'], col_data[index]['x'], dim['y'], col_data[index]['y'], fill="red", outline = 'yellow')
+            squre_color = 'lightgreen'
+            if can_add_monster() and len(monsters) <= monsters_limit:
+                monsters.append({'name': 'ghoul', 'index':len(monsters)+1})
+                squre_color = 'brown'
+            w.create_rectangle(dim['x'], col_data[index]['x'], dim['y'], col_data[index]['y'], fill=squre_color, outline = 'yellow')
         index += 1
-    print("hi")
+    print(monsters)
     
 
 def createRowAndColumn(limit, sqaure):
