@@ -43,8 +43,7 @@ city_map and compas + with diagonally
 ####### current (150,50) need move diagonally right have (200, 50) and (150, 100) so it will  (diagonally (Right Down) with compas can down and can right
 
 
-![image](https://user-images.githubusercontent.com/55125302/155826082-8bb01bbd-1442-41b4-a5ed-36d808934d1f.png)
-
+![image](https://user-images.githubusercontent.com/55125302/155826103-65eb206b-7570-42e3-85ac-179138a4af3a.png)
 
 ```
 (200, y1+square (50 + 50) = 100) (200,100)
