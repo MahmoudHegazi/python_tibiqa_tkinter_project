@@ -48,6 +48,10 @@ city_map and compas + with diagonally
 
 ```cx,cy = x1, y1+square = ncx,ncy```
 
+##### note this rule not work only on geting 1 value it can get all after th needed value or before for spells actions and effects 
+ 
+ ```cx,cy = x1, y1+square = ncx,ncy```
+ ```cx,cy = x1+square, y1+square = ncx,ncy``` move right +sqaure on x1
 ![image](https://user-images.githubusercontent.com/55125302/155826103-65eb206b-7570-42e3-85ac-179138a4af3a.png)
 
 
